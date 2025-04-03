@@ -1,7 +1,7 @@
 let questions = [
     {
         numb: 0,
-        question: "อายุของผู้ที่ต้องการวินัจฉัย",
+        question: "อายุของ ผู้ที่ต้องการวินิจฉัย",
         answer: "a",
         options: [
             "น้อยกว่า 2 ปี",

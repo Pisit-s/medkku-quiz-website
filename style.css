@@ -278,6 +278,7 @@ body {
 }
 
 .quiz-box .question-text {
+    margin-top: 20px;
     font-size: 24px;
     font-weight: 600;
 }
@@ -423,6 +424,12 @@ body {
     font-size: 26px;
     font-weight: 600;
     margin-top: 20px;
+}
+
+.percentage-container .result-box span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c40094;
 }
 
 .result-box .buttons {

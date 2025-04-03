@@ -428,15 +428,16 @@ function showResultBox() {
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
     const scoreText = document.querySelector('.score-text');
+    const scoreText2 = document.querySelector('.result-box');
 
     if (Major >= 3 && Minor >= 3) {
         // scoreText.textContent = `Major: ${Major} Minor: ${Minor}`;
-        scoreText.textContent = "ผื่นที่เป็นเข้าเกณฑ์การวินิจฉันผื่นภูมิแพ้ผิวหนัง แนะนำให้ไปพบแพทย์เพื่อยืนยันการวินิจฉัยโรคและวางแผนการรักษาต่อไป"
+        scoreText2.textContent = "ผื่นที่เป็นเข้าเกณฑ์การวินิจฉันผื่นภูมิแพ้ผิวหนัง แนะนำให้ไปพบแพทย์เพื่อยืนยันการวินิจฉัยโรคและวางแผนการรักษาต่อไป"
         console.log("====================================")
         console.log("คะแนน Major:", Major , "คะแนน Minor:", Minor);
         console.log("====================================")
     } else {
-        scoreText.textContent = "ผื่นที่เป็นยังไม่เข้าเกณฑ์การวินิจฉันผื่นภูมิแพ้ผิวหนัง ให้ติดตามอาการของผื่นหากมีอาการผื่นเป็นซ้ำให้ทำแบบประเมินซ้ำอีกครั้ง หรือปรึกษาพบแพทย์เพื่อยืนยันการวินิจฉันโรค"
+        scoreText2.textContent = "ผื่นที่เป็นยังไม่เข้าเกณฑ์การวินิจฉันผื่นภูมิแพ้ผิวหนัง ให้ติดตามอาการของผื่นหากมีอาการผื่นเป็นซ้ำให้ทำแบบประเมินซ้ำอีกครั้ง หรือปรึกษาพบแพทย์เพื่อยืนยันการวินิจฉันโรค"
         console.log("====================================")
         console.log("คะแนน Major:", Major , "คะแนน Minor:", Minor);
         console.log("====================================")
