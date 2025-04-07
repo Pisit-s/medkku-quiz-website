@@ -4,41 +4,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>วินิจฉัยโรคภูมิแพ้ผิวหนัง</title>
+        <title>KKU Skin Quiz</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="logo.png" type="image/x-icon">
     </head>
     <body>
         <main class="main">
-            <header class="header">
-                <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-                    <a class="logo d-flex align-items-center me-auto">
-                        <img src="logo.png" alt="">
-                    </a>
-
-                </div>
-            </header>
 
             <div class="container">
                 <section class="quiz-section">
                     <div class="quiz-box">
-                        <h1>แบบทดสอบเพื่อวินิจฉัยเบื้องต้น</h1>  
-                        <h2 class="question-text">What does HTML stand for?</h2>
+                        <h1>แบบทดสอบเพื่อการวินิจฉัยเบื้องต้น</h1>  
+                        <h2 class="question-text">คุณมีอาการคันผิวหนังบ่อยหรือไม่?</h2>
                         <div class="option-list">
-                            <!-- <div class="option">
-                                <span>A. Hyper Type Multi Language</span>
-                            </div>
-                            <div class="option">
-                                <span>B. Hyper Text Multiple Language</span>
-                            </div>
-                            <div class="option">
-                                <span>C. Hyper Text Markup Language</span>
-                            </div>
-                            <div class="option">
-                                <span>D. Home Text Multi Language</span>
-                            </div> -->
-                        </div>
+                       </div>
 
                         <div class="quiz-footer">
                             <button class="back-btn">ย้อนกลับ</button>
@@ -48,14 +27,16 @@
                     </div>
 
                     <div class="result-box">
-                        <h2>สรุปผลเบื้องต้น</h2>
+                        <h2>ผลการวินิจฉัยเบื้องต้น</h2>
                         <div class="percentage-container">
-                            <span class="score-text">Your Score 0 out of 5</span>
-                            <span class="result-box"></span>
+                            <div class="circular-progress">
+                                <span class="progress-value">0%</span>
+                            </div>
+                            <span class="score-text">คะแนนของคุณ 0 จาก 5</span>
                         </div>
 
                         <div class="buttons">
-                            <button class="tryAgain-btn">เริ่มอีกครั้ง</button>
+                            <button class="tryAgain-btn">ลองอีกครั้ง</button>
                             <button class="goHome-btn">กลับหน้าแรก</button>
                         </div>
                     </div>
@@ -63,9 +44,12 @@
 
                 <section class="home">
                     <div class="home-content">
+                        <div class="logo-container">
+                            <img src="logo.png" alt="Child Allergy Test Logo" class="logo-img">
+                        </div>
                         
                         <h1>แบบทดสอบเบื้องต้น</h1>
-                        <h2>เพื่อวินิจฉัยโรคภูมิแพ้ผิวหนัง<h2>
+                        <h2>เพื่อวินิจฉัยโรคภูมิแพ้ผิวหนัง</h2>
                         <button class="start-btn">เริ่มทำแบบทดสอบ</button>
                     </div>
                 </section>
@@ -73,11 +57,11 @@
         </main>
 
         <div class="popup-info">
-            <h2>เริ่มต้นทำแบบทดสอบ</h2>
-            <div class="info">แบบสอบถามว่าท่านเป็นผื่นภูมิแพ้ผิวหนังหรือไม่</div>
-        <div class="btn-group">
-            <button class="info-btn exit-btn">ออก</button>
-            <a href="#" class="info-btn continue-btn">เริ่มกันเลย</a>
+            <h2>มาเริ่มทำแบบทดสอบกัน!</h2>
+            <div class="info">แบบทดสอบนี้ใช้เพื่อวินิจฉัยเบื้องต้น ว่าเข้าข่ายโรคผื่นภูมิแพ้ผิวหนังหรือไม่</div>
+            <div class="btn-group">
+                <button class="info-btn exit-btn">ยกเลิก</button>
+                <a href="#" class="info-btn continue-btn">เริ่มกันเลย</a>
             </div>
         </div>
 
