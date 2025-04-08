@@ -62,7 +62,7 @@ body {
 
 .main {
     min-height: 100vh;
-    background: url('background.jpg') no-repeat;
+    background-color: #fff;
     background-size: cover;
     background-position: center;
     pointer-events: auto;
@@ -97,7 +97,7 @@ body {
     flex-direction: column;
     background: rgba(255, 255, 255, 0.8);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,7 +122,7 @@ body {
     background: #5b66ff;
     border: none;
     outline: none;
-    border-radius: 25px;
+    border-radius: 30px;
     box-shadow: 0 5px 15px rgba(91, 102, 255, 0.4);
     font-size: 18px;
     color: #fff;
@@ -144,7 +144,7 @@ body {
     transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 30px;
     opacity: 0;
     pointer-events: none;
@@ -190,7 +190,7 @@ body {
     background: #5b66ff;
     border: none;
     outline: none;
-    border-radius: 25px;
+    border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
     color: #fff;
@@ -236,7 +236,7 @@ body {
     position: relative;
     width: 500px;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -347,7 +347,7 @@ body {
     background: #e8e8e8;
     border: none;
     outline: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 16px;
     color: #777;
     font-weight: 600;
@@ -375,7 +375,7 @@ body {
     transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -457,7 +457,7 @@ body {
     background: #5b66ff;
     border: none;
     outline: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 16px;
     color: #fff;
     font-weight: 600;
@@ -669,7 +669,6 @@ body {
     }
 }
 
-/* Add this to your CSS file */
 .logo-container {
     display: flex;
     justify-content: center;
@@ -680,7 +679,7 @@ body {
 .logo-container img {
     max-height: 150px;
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 30px;
     object-fit: contain;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
     transition: transform 0.3s ease;
@@ -691,15 +690,12 @@ body {
     transform: scale(1.05);
 }
 
-/* Adjust home-content styles to accommodate the logo */
 .home-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Other existing home-content styles */
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-container {
         margin-bottom: 20px;

@@ -77,7 +77,7 @@ function showQuestions(index) {
             userAnswer.forEach(ans => {
                 const opt = Array.from(optionList.children).find(option => option.querySelector('span').textContent === ans);
                 if (opt) {
-                    opt.style.border = "2px solid #ffd700";
+                    opt.style.border = "2px solid #ff6b98";
                     selectMultiAns.push(opt);
                 }
             });
@@ -86,7 +86,7 @@ function showQuestions(index) {
             userAnswer.forEach(ans => {
                 const opt = Array.from(optionList.children).find(option => option.querySelector('span').textContent === ans);
                 if (opt) {
-                    opt.style.border = "2px solid #ffd700";
+                    opt.style.border = "2px solid #ff6b98";
                     selectMultiAns.push(opt);
                 }
             });
@@ -95,7 +95,7 @@ function showQuestions(index) {
             userAnswer.forEach(ans => {
                 const opt = Array.from(optionList.children).find(option => option.querySelector('span').textContent === ans);
                 if (opt) {
-                    opt.style.border = "2px solid #ffd700";
+                    opt.style.border = "2px solid #ff6b98";
                     selectedOption4.push(opt);
                 }
             });
@@ -103,7 +103,7 @@ function showQuestions(index) {
             // สำหรับคำถามที่เป็น single answer
             const selected = Array.from(optionList.children).find(option => option.querySelector('span').textContent === userAnswer);
             if (selected) {
-                selected.style.border = "2px solid #ffd700";
+                selected.style.border = "2px solid #ff6b98";
                 selectedAnswer = selected;
             }
         }
@@ -140,7 +140,7 @@ function selectAnswerForQ4(option, index) {
                 // เคลียร์ตัวเลือกอื่น ๆ เมื่อเลือก "ไม่มีอาการดังกล่าว"
                 selectedOption4.forEach(opt => opt.style.border = "");
                 selectedOption4 = [option];
-                option.style.border = "2px solid #ffd700";
+                option.style.border = "2px solid #ff6b98";
             }
         } else {
             // หากมีการเลือก "ไม่มีอาการดังกล่าว" เอาไว้ ยกเลิกการเลือกก่อน
@@ -156,7 +156,7 @@ function selectAnswerForQ4(option, index) {
                 option.style.border = "";
             } else if (selectedOption4.length < 2) {
                 selectedOption4.push(option);
-                option.style.border = "2px solid #ffd700";
+                option.style.border = "2px solid #ff6b98";
             }
         }
     }
@@ -180,7 +180,7 @@ function selectMultipleAnswersForQ3(option, index) {
             option.style.border = "";
         } else {
             selectMultiAns.push(option);
-            option.style.border = "2px solid #ffd700";
+            option.style.border = "2px solid #ff6b98";
         }
     }
 
@@ -207,7 +207,7 @@ function selectMultipleAnswersForQ1(option, index) {
                 // เคลียร์ตัวเลือกอื่น ๆ เมื่อเลือก "ไม่มีอาการดังกล่าว"
                 selectMultiAns.forEach(opt => opt.style.border = "");
                 selectMultiAns = [option];
-                option.style.border = "2px solid #ffd700";
+                option.style.border = "2px solid #ff6b98";
             }
         } else {
             // หากมีการเลือก "ไม่มีอาการดังกล่าว" เอาไว้ ยกเลิกการเลือกก่อน
@@ -223,7 +223,7 @@ function selectMultipleAnswersForQ1(option, index) {
                 option.style.border = "";
             } else if (selectMultiAns.length < 3) {
                 selectMultiAns.push(option);
-                option.style.border = "2px solid #ffd700";
+                option.style.border = "2px solid #ff6b98";
             }
         }
     }
@@ -245,7 +245,7 @@ function selectAnswer(option, index) {
         selectedAnswer.style.border = "";
     }
     selectedAnswer = option;  // กำหนดคำตอบที่เลือกใหม่
-    selectedAnswer.style.border = "2px solid #ffd700";  // กำหนดสีกรอบใหม่
+    selectedAnswer.style.border = "2px solid #ff6b98";  // กำหนดสีกรอบใหม่
     nextBtn.classList.add('active');
 
     // userAnswers[index] = option.textContent;
