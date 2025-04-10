@@ -42,22 +42,31 @@ function Reset() {
     selectMultiAns = [];
 }
 
-//function แสดงคำถาม loop คำถามแต่ละข้อจากไฟล์  questions.js
 function showQuestions(index) {
     const questionNumb = questions[index].numb
     const questionText = document.querySelector('.question-text');
     questionText.textContent = `${questions[index].question}`;
 
+    const existingImage = document.querySelector('.question-image');
+    if (existingImage) {
+        existingImage.remove();
+    }
+    
+    if (questions[index].image) {
+        const imageContainer = document.createElement('div');
+        imageContainer.className = 'question-image';
+        imageContainer.innerHTML = `<img src="images/${questions[index].image}" alt="${questions[index].question}">`;
+        questionText.insertAdjacentElement('afterend', imageContainer);
+    }
+
     optionList.innerHTML = "";
 
-    // สร้างตัวเลือกทั้งหมดก่อน
     questions[index].options.forEach(optionText => {
         let optionTag = document.createElement('div');
         optionTag.classList.add('option');
         optionTag.innerHTML = `<span>${optionText}</span>`;
         optionList.appendChild(optionTag);
 
-        // ตั้งค่า onclick สำหรับแต่ละตัวเลือก
         if (questions[index].numb === 1) {
             optionTag.onclick = () => selectMultipleAnswersForQ1(optionTag, index);
         } else if (questions[index].numb === 3) {
@@ -69,7 +78,6 @@ function showQuestions(index) {
         }
     });
 
-    // ตั้งค่าสถานะที่เลือกจาก userAnswers ตาม index
     const userAnswer = userAnswers[questions[index].numb];
     if (userAnswer) {
         if (questionNumb === 1) {
@@ -100,7 +108,6 @@ function showQuestions(index) {
                 }
             });
         } else {
-            // สำหรับคำถามที่เป็น single answer
             const selected = Array.from(optionList.children).find(option => option.querySelector('span').textContent === userAnswer);
             if (selected) {
                 selected.style.border = "2px solid #ff6b98";
@@ -108,7 +115,6 @@ function showQuestions(index) {
             }
         }
 
-        // กำหนดสถานะของปุ่มต่อไป
         if (questionNumb === 1 || questionNumb === 3 || questionNumb === 4) {
             if (Array.isArray(userAnswer) && userAnswer.length > 0) {
                 nextBtn.classList.add('active');
@@ -133,17 +139,14 @@ function selectAnswerForQ4(option, index) {
     if (optionText) {
         if (optionText === "ไม่มีประวัติภูมิแพ้") {
             if (selectedOption4.includes(option)) {
-                // ยกเลิกการเลือกเมื่อคลิกซ้ำ
                 selectedOption4 = selectedOption4.filter(opt => opt !== option);
                 option.style.border = "";
             } else {
-                // เคลียร์ตัวเลือกอื่น ๆ เมื่อเลือก "ไม่มีอาการดังกล่าว"
                 selectedOption4.forEach(opt => opt.style.border = "");
                 selectedOption4 = [option];
                 option.style.border = "2px solid #ff6b98";
             }
         } else {
-            // หากมีการเลือก "ไม่มีอาการดังกล่าว" เอาไว้ ยกเลิกการเลือกก่อน
             const ans4 = selectedOption4.find(opt => opt.querySelector('span').textContent === "ไม่มีประวัติภูมิแพ้");
             if (ans4) {
                 selectedOption4 = selectedOption4.filter(opt => opt !== ans4);
@@ -151,7 +154,6 @@ function selectAnswerForQ4(option, index) {
             }
 
             if (selectedOption4.includes(option)) {
-                // ยกเลิกการเลือกเมื่อคลิกซ้ำ
                 selectedOption4 = selectedOption4.filter(opt => opt !== option);
                 option.style.border = "";
             } else if (selectedOption4.length < 2) {
@@ -175,7 +177,6 @@ function selectMultipleAnswersForQ3(option, index) {
 
     if (optionText) {
         if (selectMultiAns.includes(option)) {
-            // ยกเลิกการเลือกเมื่อคลิกซ้ำ
             selectMultiAns = selectMultiAns.filter(opt => opt !== option);
             option.style.border = "";
         } else {
@@ -193,24 +194,20 @@ function selectMultipleAnswersForQ3(option, index) {
     userAnswers[questions[index].numb] = selectMultiAns.map(opt => opt.querySelector('span').textContent);
 }
 
-//เลือกหลายคำตอบ ขอ้ 1
 function selectMultipleAnswersForQ1(option, index) {
     const optionText = option.querySelector('span').textContent;
 
     if (optionText) {
         if (optionText === "ไม่มีอาการดังกล่าว") {
             if (selectMultiAns.includes(option)) {
-                // ยกเลิกการเลือกเมื่อคลิกซ้ำ
                 selectMultiAns = selectMultiAns.filter(opt => opt !== option);
                 option.style.border = "";
             } else {
-                // เคลียร์ตัวเลือกอื่น ๆ เมื่อเลือก "ไม่มีอาการดังกล่าว"
                 selectMultiAns.forEach(opt => opt.style.border = "");
                 selectMultiAns = [option];
                 option.style.border = "2px solid #ff6b98";
             }
         } else {
-            // หากมีการเลือก "ไม่มีอาการดังกล่าว" เอาไว้ ยกเลิกการเลือกก่อน
             const noSymptomOption = selectMultiAns.find(opt => opt.querySelector('span').textContent === "ไม่มีอาการดังกล่าว");
             if (noSymptomOption) {
                 selectMultiAns = selectMultiAns.filter(opt => opt !== noSymptomOption);
@@ -218,7 +215,6 @@ function selectMultipleAnswersForQ1(option, index) {
             }
 
             if (selectMultiAns.includes(option)) {
-                // ยกเลิกการเลือกเมื่อคลิกซ้ำ
                 selectMultiAns = selectMultiAns.filter(opt => opt !== option);
                 option.style.border = "";
             } else if (selectMultiAns.length < 3) {
@@ -238,17 +234,14 @@ function selectMultipleAnswersForQ1(option, index) {
     userAnswers[questions[index].numb] = selectMultiAns.map(opt => opt.querySelector('span').textContent);
 } 
 
-
-// ฟังก์ชันเช็คคำตอบที่เลือก
 function selectAnswer(option, index) {
     if (selectedAnswer) {
         selectedAnswer.style.border = "";
     }
-    selectedAnswer = option;  // กำหนดคำตอบที่เลือกใหม่
-    selectedAnswer.style.border = "2px solid #ff6b98";  // กำหนดสีกรอบใหม่
+    selectedAnswer = option;  
+    selectedAnswer.style.border = "2px solid #ff6b98";  
     nextBtn.classList.add('active');
 
-    // userAnswers[index] = option.textContent;
     userAnswers[questions[index].numb] = option.querySelector('span').textContent;
 
     if (questions[index].numb === 0) {
@@ -280,7 +273,7 @@ function updateScore(questionIndex, isCorrect) {
     if (answerStatus.hasOwnProperty(questions[questionIndex].numb)) {
         const previousCorrectness = answerStatus[questions[questionIndex].numb];
 
-        if (previousCorrectness && !isCorrect) { // เคยถูก แต่ตอนนี้ผิด
+        if (previousCorrectness && !isCorrect) { 
             if (type === "Major") {
                 Major--;
                 console.log(`Major ถูกลบ: ${Major}`);
@@ -288,7 +281,7 @@ function updateScore(questionIndex, isCorrect) {
                 Minor--;
                 console.log(`Minor ถูกลบ: ${Minor}`);
             }
-        } else if (!previousCorrectness && isCorrect) { // เคยผิด แต่ตอนนี้ถูก
+        } else if (!previousCorrectness && isCorrect) { 
             if (type === "Major") {
                 Major++;
                 console.log(`Major ถูกเพิ่ม: ${Major}`);
@@ -297,8 +290,7 @@ function updateScore(questionIndex, isCorrect) {
                 console.log(`Minor ถูกเพิ่ม: ${Minor}`);
             }
         }
-        // ไม่มีการเปลี่ยนแปลงถ้าความถูกต้องไม่เปลี่ยนแปลง
-    } else { // เป็นคำถามใหม่ (ยังไม่เคยตอบ)
+    } else {
         if (isCorrect) {
             if (type === "Major") {
                 Major++;
@@ -313,7 +305,6 @@ function updateScore(questionIndex, isCorrect) {
     answerStatus[questions[questionIndex].numb] = isCorrect;
 }
 
-//function ข้อต่อไป + เพิ่มคะแนน
 nextBtn.onclick = () => {
     if (selectedAnswer || selectedOption4.length > 0 || selectMultiAns.length > 0) {
         const questionIndex = questionCount;
@@ -322,17 +313,14 @@ nextBtn.onclick = () => {
 
         if (questionn.numb === 2) {
             if (userAnswers[questionIndex] === "เป็นผื่นลักษณะนี้ครั้งแรก") {
-                // เพิ่มข้อ 2.1 หากยังไม่มี
                 const exists = questions.some(q => q.numb === 2.1);
                 if (!exists) {
                     questions.splice(questionIndex + 1, 0, Question21);
                 }
             } else {
-                // ลบข้อ 2.1 หากมี
                 const indexToRemove = questions.findIndex(q => q.numb === 2.1);
                 if (indexToRemove !== -1) {
                     
-                    // ถ้าเคยตอบข้อ 2.1 ไปแล้ว ให้ลบคะแนนออก
                     if (answerStatus[questions[indexToRemove].numb]) {
                         Major--;
                         console.log("ลบคะแนนที่ได้ข้อ 2.1:") 
@@ -340,19 +328,17 @@ nextBtn.onclick = () => {
                         delete userAnswers[questions[indexToRemove].numb];
                     }
                     
-                    // ลบข้อ 2.1 ออกจาก questions
                     questions.splice(indexToRemove, 1);
                 }
             }
         }
 
-        // ตรวจสอบความถูกต้องของคำตอบ
         if (questionn.numb === 1) {
             const Secttion1 = selectMultiAns.some(opt => opt.querySelector('span').textContent === "ไม่มีอาการดังกล่าว");
             if (Secttion1) {
-                isCorrect = false; // ถ้าเลือก "ไม่มีอาการดังกล่าว" ผิด
+                isCorrect = false; 
             } else {
-                isCorrect = selectMultiAns.length > 0; // ถ้าเลือกอย่างอื่น (หรือหลายอย่าง) ถูก
+                isCorrect = selectMultiAns.length > 0; 
             }
         } else if (questionn.numb === 2 && userAnswers[questionIndex] !== "เป็นผื่นลักษณะนี้ครั้งแรก") {
             isCorrect = true;
@@ -371,25 +357,19 @@ nextBtn.onclick = () => {
                 isCorrect = selectedOption4.length > 0;
             }
         } else if (Array.isArray(questionn.answer)) {
-            // คำถามที่มีหลายคำตอบอื่น ๆ (ถ้ามี)
             isCorrect = questionn.answer.every(ans => userAnswers[questions[questionIndex].numb].includes(ans));
         } else {
-            // คำถามแบบ single answer
             isCorrect = questionn.answer.includes(userAnswers[questions[questionIndex].numb]);
         }
 
-        // การจัดการคะแนน
         updateScore(questionIndex, isCorrect);
 
-        // รีเซ็ตตัวแปร
         selectedOption4 = [];
         selectedAnswer = null;
         selectMultiAns = [];
 
-        // อัปเดตคะแนน
         console.log(`Major: ${Major}, Minor: ${Minor}`);
 
-        // ไปยังคำถามต่อไปหรือแสดงผลลัพธ์
         if (questionCount < questions.length - 1) {
             questionCount++;
             showQuestions(questionCount);
@@ -403,27 +383,23 @@ nextBtn.onclick = () => {
     }
 };
 
-//function ปุ่มย้อนกลับ
 backBtn.onclick = () => {
     if (questionCount > 0) {
         questionCount--;
         questionNumb--;
         showQuestions(questionCount); 
         questionCounter(questionNumb); 
-        // ปุ่มย้อนกลับเริ่มทำงานหลังจากผ่านคำถามแรกไปแล้ว
         if (questionNumb === 1) {
             backBtn.classList.remove('active');
         }
     }
 }
 
-//function เลขคำถามตอนทำ Quize 
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total');
     questionTotal.textContent = `${index} จาก ${questions.length} คำถาม`;
 }
 
-//function ผลลัพท์
 function showResultBox() {
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
@@ -431,7 +407,6 @@ function showResultBox() {
     const scoreText2 = document.querySelector('.result-box');
 
     if (Major >= 3 && Minor >= 3) {
-        // scoreText.textContent = `Major: ${Major} Minor: ${Minor}`;
         scoreText2.textContent = "ผื่นที่เป็นเข้าเกณฑ์การวินิจฉันผื่นภูมิแพ้ผิวหนัง แนะนำให้ไปพบแพทย์เพื่อยืนยันการวินิจฉัยโรคและวางแผนการรักษาต่อไป"
         console.log("====================================")
         console.log("คะแนน Major:", Major , "คะแนน Minor:", Minor);
@@ -444,7 +419,6 @@ function showResultBox() {
     }
 }
 
-//function ลองใหม่อีกครั้งหลังทำ Quiz
 tryAgainBtn.onclick = () => {
     quizBox.classList.add('active');
     nextBtn.classList.remove('active');
@@ -457,7 +431,6 @@ tryAgainBtn.onclick = () => {
     
 }
 
-//function กลับมาหน้าแรกหลังทำ Quiz
 goHomeBtn.onclick = () => {
     quizSection.classList.remove('active');
     nextBtn.classList.remove('active');
@@ -470,19 +443,16 @@ goHomeBtn.onclick = () => {
     
 }
 
-//function ปุ่ม เริ่มทำQuiz
 startQuiz.onclick = () => {
     Quizguide.classList.add('active');
     main.classList.add('active');
 }
 
-//function ปุ่มออก
 exitBtn.onclick = () => {
     Quizguide.classList.remove('active');
     main.classList.remove('active');
 }
 
-//function ปุ่มไปต่อไปหน้า Quiz Guize
 continueBtn.onclick = () => {
     quizSection.classList.add('active');
     Quizguide.classList.remove('active');

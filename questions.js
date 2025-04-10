@@ -85,7 +85,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor1.jpg"
     },
 
     {
@@ -96,7 +97,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor2.jpg"
     },
 
     {
@@ -107,7 +109,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor3.jpg"
     },
 
     {
@@ -118,7 +121,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor4.jpg"
     },
 
     {
@@ -129,7 +133,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor5.jpg"
     },
 
     {
@@ -140,7 +145,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor6.jpg"
     },
 
     {
@@ -151,7 +157,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor7.jpg"
     },
 
     {
@@ -162,7 +169,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor8.jpg"
     },
 
     {
@@ -228,7 +236,8 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี"
+        answer: "มี",
+        image: "minor15.jpg"
     },
 
     {
