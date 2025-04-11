@@ -1019,6 +1019,7 @@ body {
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(91, 102, 255, 0.3);
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .back-button:hover {
