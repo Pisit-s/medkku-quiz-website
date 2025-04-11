@@ -239,7 +239,7 @@ let questions = [
         answer: "มี",
         image: "minor15.jpg"
     },
-
+    
     {
         numb: 5.16,
         type: "Minor",
@@ -267,7 +267,7 @@ const Question21 = {
 const questionTypes = {
     1: "Major",
     2: "Major",
-    2.1: "Major", // คำถาม 2.1 เพิ่มขึ้นแบบไดนามิก
+    2.1: "Major",
     3: "Major",
     4: "Major",
     5.1: "Minor",
@@ -285,6 +285,4 @@ const questionTypes = {
     5.14: "Minor",
     5.15: "Minor",
     5.16: "Minor"
-    // เพิ่มคำถามอื่น ๆ ตามต้องการ
 };
-
