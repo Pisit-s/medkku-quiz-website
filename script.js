@@ -11,6 +11,7 @@ const goHomeBtn = document.querySelector('.goHome-btn');
 const nextBtn = document.querySelector('.next-btn');
 const backBtn = document.querySelector('.back-btn');
 const optionList = document.querySelector('.option-list');
+const aboutBtn = document.querySelector('.back-button.aboutme')
 
 let questionCount = 0;
 let questionNumb = 1;
@@ -40,12 +41,20 @@ function Reset() {
     selectedAnswers = [];
     selectedOption4 = []; 
     selectMultiAns = [];
+    if (aboutBtn) {
+        aboutBtn.classList.remove('hidden')
+        alert('reset')
+    }
 }
 
-function showQuestions(index) {
+function showQuestions(index , hideAboutBtn = true) {
     const questionNumb = questions[index].numb
     const questionText = document.querySelector('.question-text');
     questionText.textContent = `${questions[index].question}`;
+    
+    if (hideAboutBtn && aboutBtn) {
+        aboutBtn.classList.add('hidden')
+    }
 
     const existingImage = document.querySelector('.question-image');
     if (existingImage) {
@@ -462,7 +471,7 @@ tryAgainBtn.onclick = () => {
 
     console.log('ทำอีกครั้ง')
     Reset();
-    showQuestions(questionCount);
+    showQuestions(questionCount, false);
     questionCounter(questionNumb);
     
 }
@@ -474,7 +483,7 @@ goHomeBtn.onclick = () => {
 
     console.log('กลับหน้าแรก')
     Reset();
-    showQuestions(questionCount);
+    showQuestions(questionCount, false);
     questionCounter(questionNumb);
     
 }
