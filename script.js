@@ -43,7 +43,6 @@ function Reset() {
     selectMultiAns = [];
     if (aboutBtn) {
         aboutBtn.classList.remove('hidden')
-        alert('reset')
     }
 }
 
@@ -483,7 +482,7 @@ goHomeBtn.onclick = () => {
 
     console.log('กลับหน้าแรก')
     Reset();
-    showQuestions(questionCount, false);
+    showQuestions(questionCount);
     questionCounter(questionNumb);
     
 }
