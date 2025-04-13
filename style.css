@@ -713,7 +713,7 @@ body {
 
     .header {
         padding: 15px 5%;
-        width: 100vw; 
+        width: 100vw;
         max-width: 100%; 
         overflow: hidden;
     }
@@ -773,7 +773,7 @@ body {
     }
 
     .quiz-box h1 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .quiz-header span, .quiz-footer .question-total {
@@ -811,7 +811,7 @@ body {
     }
 
     .result-box h2 {
-        font-size: 35px;
+        font-size: 33px;
     }
 }
 
