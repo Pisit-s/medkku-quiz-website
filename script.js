@@ -11,7 +11,6 @@ const goHomeBtn = document.querySelector('.goHome-btn');
 const nextBtn = document.querySelector('.next-btn');
 const backBtn = document.querySelector('.back-btn');
 const optionList = document.querySelector('.option-list');
-const aboutBtn = document.querySelector('.back-button.aboutme')
 
 let questionCount = 0;
 let questionNumb = 1;
@@ -41,19 +40,13 @@ function Reset() {
     selectedAnswers = [];
     selectedOption4 = []; 
     selectMultiAns = [];
-    if (aboutBtn) {
-        aboutBtn.classList.remove('hidden')
-    }
+
 }
 
-function showQuestions(index , hideAboutBtn = true) {
+function showQuestions(index) {
     const questionNumb = questions[index].numb
     const questionText = document.querySelector('.question-text');
     questionText.textContent = `${questions[index].question}`;
-    
-    if (hideAboutBtn && aboutBtn) {
-        aboutBtn.classList.add('hidden')
-    }
 
     const existingImage = document.querySelector('.question-image');
     if (existingImage) {
