@@ -63,7 +63,7 @@ body {
     max-width: 500px;
     height: auto;
     margin-top: 50px;
-    filter: drop-shadow(0 4px 10px rgba(11, 11, 11, 0.682));
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.133));
     animation: float-badge 2s ease-in-out infinite;
 }
 
