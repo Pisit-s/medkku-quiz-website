@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
+    letter-spacing: 1px;
 }
 
 html, body {
@@ -56,7 +57,6 @@ body {
 .header .logo h1 {
     font-weight: 700;
     margin: 0;
-    letter-spacing: 1px;
     text-transform: uppercase;
     color: #5b66ff;
 }
@@ -131,7 +131,7 @@ body {
 .home-content h1 {
     font-size: 50px;
     font-weight: 500;
-    color: #5b66ff;
+    color: #804e2a;
     text-shadow: 2px 2px 0px rgba(255, 107, 152, 0.2);
     margin-bottom: 30px;
     text-align: center;
@@ -141,7 +141,7 @@ body {
 .home-content h2 {
     font-size: 30px;
     text-align: center;
-    color: #ff6b98;
+    color: #804e2a;
 }
 
 .home-content .start-btn {
@@ -154,7 +154,6 @@ body {
     box-shadow: 0 5px 15px rgba(91, 102, 255, 0.4);
     font-size: 30px;
     color: #fff;
-    letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
     transition: .5s;
@@ -190,6 +189,7 @@ body {
     font-size: 32px;
     color: #5b66ff;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .popup-info .info {
@@ -198,6 +198,7 @@ body {
     color: #555;
     font-weight: 500;
     margin: 15px 0;
+    text-align: center;
 }
 
 .popup-info .btn-group {
@@ -373,9 +374,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px dashed #eaeaea;
     padding-top: 20px;
-    margin-top: 25px;
 }
 
 .quiz-footer .question-total {
@@ -446,6 +445,7 @@ body {
 
 .result-box .buttons {
     display: flex;
+    margin-top: 10px;
 }
 
 .buttons button {
@@ -569,14 +569,64 @@ body {
 }
 
 .result-recommend {
-    font-size: 15px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.result-recommend h4 {
+    font-size: 20px;
+    color: #5b66ff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.recommend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommend-list li {
+    position: relative;
+    padding: 10px 0 10px 35px;
+    font-size: 16px;
     color: #555;
-    text-align: left;
-    margin-bottom: 5px;
-    line-height: 1.6;
-    background-color: #eaeaea8c;
-    border-radius: 10px;
-    padding: 10px;
+    line-height: 1.5;
+}
+
+.recommend-list li:before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+    color: #5b66ff;
+    font-size: 20px;
+}
+
+.recommend-list li:not(:last-child) {
+    border-bottom: 1px solid #8a8a8a4b;
+}
+
+@media (max-width: 480px) {
+    .result-recommend {
+        padding: 15px;
+    }
+
+    .result-recommend h4 {
+        font-size: 18px;
+    }
+
+    .recommend-list li {
+        font-size: 14px;
+        padding: 8px 0 8px 30px;
+    }
+
+    .recommend-list li:before {
+        left: 10px;
+    }
 }
 
 .result-links {
@@ -591,6 +641,13 @@ body {
     text-align: left;
 }
 
+.link-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .link-container {
     display: flex;
     flex-direction: column;
@@ -600,15 +657,82 @@ body {
 .link-container a {
     padding: 12px 15px;
     background: #f8f8f8;
-    border-radius: 10px;
+    border-radius: 25px;
     color: #5b66ff;
     text-decoration: none;
     transition: .3s;
+    display: flex;
+    align-items: center;
 }
 
 .link-container a:hover {
     background: #efefff;
     transform: translateY(-2px);
+}
+
+/* Footer */
+.about-footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px dashed #eaeaea;
+}
+
+.about-footer p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+
+.about-footer a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    line-height: 1.5;
+}
+
+.about-footer .highlight-primary {
+    color: #303df4;
+    font-weight: 600;
+}
+
+.about-footer .highlight-secondary {
+    color: #ff6b98;
+    font-weight: 600;
+}
+
+.about-footer a:hover {
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+.about-footer .highlight-primary:hover {
+    color: #5b66ff;
+}
+
+.about-footer .highlight-secondary:hover {
+    color: #ff89ac;
+}
+
+.about-footer .highlight-primary {
+    color: #303df4;
+    font-weight: 600;
+}
+
+.about-footer .highlight-secondary {
+    color: #ff6b98; 
+    font-weight: 600;
+}
+
+.result-box .about-footer {
+    width: 100%;
+    border-top: 2px dashed #eaeaea;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.result-box .about-footer p {
+    margin: 5px 0;
 }
 
 @media (min-width: 1200px) {
@@ -622,7 +746,7 @@ body {
     }
 }
 
-/* สำหรับแท็บเล็ตขนาดใหญ่ */
+/*แท็บเล็ตขนาดใหญ่ */
 @media (max-width: 992px) and (min-width: 769px) {
     .home-content h1 {
         font-size: 50px;
@@ -853,6 +977,109 @@ body {
 
     .result-status {
         font-size: 32px;
+    }
+}
+
+/* Base styles for both boxes */
+.quiz-section .quiz-box,
+.quiz-section .result-box {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+
+/* Scrollbar styles for both boxes */
+.quiz-section .quiz-box::-webkit-scrollbar,
+.quiz-section .result-box::-webkit-scrollbar {
+    width: 8px !important;
+    display: block !important;
+}
+
+.quiz-section .quiz-box::-webkit-scrollbar-track,
+.quiz-section .result-box::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 4px !important;
+}
+
+.quiz-section .quiz-box::-webkit-scrollbar-thumb,
+.quiz-section .result-box::-webkit-scrollbar-thumb {
+    background: #5b66ff !important;
+    border-radius: 4px !important;
+}
+
+.quiz-section .quiz-box::-webkit-scrollbar-thumb:hover,
+.quiz-section .result-box::-webkit-scrollbar-thumb:hover {
+    background: #ff6b98 !important;
+}
+
+/* Firefox scrollbar */
+.quiz-section .quiz-box,
+.quiz-section .result-box {
+    scrollbar-width: thin !important;
+    scrollbar-color: #5b66ff #f1f1f1 !important;
+}
+
+/* Styles for result box only */
+.quiz-section .result-box.active {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+
+/* Scrollbar styles for result box */
+.quiz-section .result-box.active::-webkit-scrollbar {
+    width: 8px !important;
+    display: block !important;
+}
+
+.quiz-section .result-box.active::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 4px !important;
+}
+
+.quiz-section .result-box.active::-webkit-scrollbar-thumb {
+    background: #5b66ff !important;
+    border-radius: 4px !important;
+}
+
+.quiz-section .result-box.active::-webkit-scrollbar-thumb:hover {
+    background: #ff6b98 !important;
+}
+
+/* Firefox scrollbar for result box */
+.quiz-section .result-box.active {
+    scrollbar-width: thin !important;
+    scrollbar-color: #5b66ff #f1f1f1 !important;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+    .quiz-section .quiz-box,
+    .quiz-section .result-box {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+}
+
+@media (max-width: 769px) {
+    .quiz-section .quiz-box,
+    .quiz-section .result-box {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-section .quiz-box,
+    .quiz-section .result-box {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+}
+
+@media (max-width: 377px) {
+    .quiz-section .quiz-box,
+    .quiz-section .result-box {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
     }
 }
 
