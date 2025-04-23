@@ -4,12 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KKU ADbot</title>
+        <title>KKU ADBot</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="about.css">
         <link rel="icon" href="logokku.png" type="image/y-icon">
     </head>
     <body>
+        <header class="header">
+            <div class="logo">
+                <img src="logo-facu.png" alt="KKU ADbot Logo" class="logo-img">
+            </div>
+        </header>
         <main class="main">
             <div class="container">
                 <section class="quiz-section">
@@ -23,6 +28,12 @@
                             <span class="question-total">1 จาก 5 คำถาม</span>
                             <button class="next-btn">ต่อไป</button>
                         </div>
+
+                        <footer class="about-footer">
+                            <p>© Copyright <a href="about.html" target="_blank" class="highlight-primary">KKU ADBot</a> All Rights Reserved</p>
+                            <p>Developed by <a href="www.kuchi.dev" target="_blank" class="highlight-secondary">kuchi.dev</a></p>
+                        </footer>
+                
                     </div>
 
                     <div class="result-box">
@@ -39,7 +50,6 @@
                             <button class="goHome-btn">กลับหน้าแรก</button>
                         </div>
                     </div>
-                    <a href="about.html" class="back-button aboutme">เกี่ยวกับเรา</a>
                 </section>
 
                 <section class="home">
@@ -48,17 +58,23 @@
                             <img src="logo2.png" alt="Child Allergy Test Logo" class="logo-img">
                         </div>
                         
-                        <h1>แบบทดสอบเบื้องต้น</h1>
-                        <h2>เพื่อวินิจฉัยโรคภูมิแพ้ผิวหนัง</h2>
+                        <h2>แบบทดสอบเบื้องต้น</h2>
+                        <h1>สำหรับการวินิจฉัย<br>
+                            โรคผื่นภูมิแพ้ผิวหนัง</h1>
                         <button class="start-btn">เริ่มทำแบบทดสอบ</button>
+                        <a href="about.html" class="back-button aboutme">เกี่ยวกับเรา</a>
                     </div>
                 </section>
+
+                
             </div>
         </main>
 
         <div class="popup-info">
-            <h2>มาเริ่มทำแบบทดสอบกัน!</h2>
-            <div class="info">แบบทดสอบนี้เป็นแบบทดสอบเพื่อใช้วินิจฉัยเบื้องต้น ว่าเข้าข่ายเป็นโรคผื่นภูมิแพ้ผิวหนังหรือไม่</div>
+            <h2>มาเริ่มทำแบบคัดกรองกัน !!</h2>
+            <div class="info"> แบบคัดกรองนี้เป็นการประเมินเบื้องต้น ในการวินิจฉัยโรคผื่นภูมิแพ้ผิวหนัง  
+                ลักษณะแบบคัดกรอง เป็นข้อมูลถามตอบ เกี่ยวกับอาการของผื่นที่ท่านเป็น 
+                ใช้เวลาในการทำแบบคัดกรอง ประมาณ 1-2 นาที</div>
             <div class="btn-group">
                 <button class="info-btn exit-btn">ยกเลิก</button>
                 <a href="#" class="info-btn continue-btn">เริ่มกันเลย</a>
