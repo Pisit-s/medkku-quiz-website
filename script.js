@@ -504,6 +504,9 @@ continueBtn.onclick = () => {
     quizBox.classList.add('active');
 
     showQuestions(0);
-    questionCounter(1);
+    questionCounter(1);   
+}
+
+function imageShow() {
     
 }
