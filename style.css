@@ -258,6 +258,18 @@ body {
     transition-delay: .25s;
 }
 
+@media (max-width: 900px) {
+    .quiz-section {
+        background-image: url('bg1.png');
+    }
+}
+
+@media (max-width: 500px) {
+    .quiz-section {
+        background-image: url('bg4.png');
+    }
+}
+
 .quiz-section.active {
     left: 0;
 }
