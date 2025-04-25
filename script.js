@@ -1,4 +1,5 @@
 const startQuiz = document.querySelector('.start-btn');
+const logoImg = document.querySelector('.logo-img')
 const Quizguide = document.querySelector('.popup-info');
 const exitBtn = document.querySelector('.exit-btn');
 const main = document.querySelector('.main');
@@ -57,6 +58,9 @@ function showQuestions(index) {
         const imageContainer = document.createElement('div');
         imageContainer.className = 'question-image';
         imageContainer.innerHTML = `<img src="images/${questions[index].image}" alt="${questions[index].question}">`;
+        imageContainer.onclick = () => {
+            openModal(`images/${questions[index].image}`, questions[index].question);
+        }
         questionText.insertAdjacentElement('afterend', imageContainer);
     }
 
@@ -521,6 +525,31 @@ continueBtn.onclick = () => {
     questionCounter(1);   
 }
 
-function imageShow() {
-    
+function openModal(src, altText) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const captionText = document.getElementById('caption');
+
+    modal.style.display = "block";
+    modalImg.src = src;
+    modalImg.alt = altText;
+    captionText.textContent = altText;
+
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    modal.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
 }
+
+document.addEventListener('keydown', (event) => {
+    const modal = document.getElementById('imageModal');
+    if (event.key === 'Escape' && modal.style.display === "block") {
+        modal.style.display = "none";
+    }
+});

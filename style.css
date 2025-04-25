@@ -14,6 +14,10 @@
     }
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -242,6 +246,63 @@ body {
 .popup-info .btn-group .info-btn:nth-child(2):hover {
     background: #4b57e8;
     transform: translateY(-3px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; 
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: zoom 0.3s;
+    object-fit: contain;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }
 
 .quiz-section {
@@ -856,6 +917,14 @@ body {
     .logo-img {
         max-height: 120px;
     }
+
+    .modal-content{
+        margin-top: 15vh;
+    }
+
+    #caption {
+        font-size: 32px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -966,6 +1035,14 @@ body {
     .result-box h2 {
         font-size: 33px;
     }
+
+    .modal-content{
+        margin-top: 18vh;
+    }
+
+    #caption {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 377px) {
@@ -987,8 +1064,17 @@ body {
         font-size: 30px;
     }
 
+
     .result-status {
         font-size: 32px;
+    }
+
+    .modal-content{
+        margin-top: 10vh;
+    }
+
+    #caption {
+        font-size: 18px;
     }
 }
 
@@ -999,68 +1085,13 @@ body {
     overflow-y: auto !important;
 }
 
-/* Scrollbar styles for both boxes */
-.quiz-section .quiz-box::-webkit-scrollbar,
-.quiz-section .result-box::-webkit-scrollbar {
-    width: 8px !important;
-    display: block !important;
-}
-
-.quiz-section .quiz-box::-webkit-scrollbar-track,
-.quiz-section .result-box::-webkit-scrollbar-track {
-    background: #f1f1f1 !important;
-    border-radius: 4px !important;
-}
-
-.quiz-section .quiz-box::-webkit-scrollbar-thumb,
-.quiz-section .result-box::-webkit-scrollbar-thumb {
-    background: #5b66ff !important;
-    border-radius: 4px !important;
-}
-
-.quiz-section .quiz-box::-webkit-scrollbar-thumb:hover,
-.quiz-section .result-box::-webkit-scrollbar-thumb:hover {
-    background: #ff6b98 !important;
-}
-
-/* Firefox scrollbar */
-.quiz-section .quiz-box,
-.quiz-section .result-box {
-    scrollbar-width: thin !important;
-    scrollbar-color: #5b66ff #f1f1f1 !important;
-}
-
 /* Styles for result box only */
 .quiz-section .result-box.active {
     max-height: 90vh !important;
     overflow-y: auto !important;
 }
 
-/* Scrollbar styles for result box */
-.quiz-section .result-box.active::-webkit-scrollbar {
-    width: 8px !important;
-    display: block !important;
-}
 
-.quiz-section .result-box.active::-webkit-scrollbar-track {
-    background: #f1f1f1 !important;
-    border-radius: 4px !important;
-}
-
-.quiz-section .result-box.active::-webkit-scrollbar-thumb {
-    background: #5b66ff !important;
-    border-radius: 4px !important;
-}
-
-.quiz-section .result-box.active::-webkit-scrollbar-thumb:hover {
-    background: #ff6b98 !important;
-}
-
-/* Firefox scrollbar for result box */
-.quiz-section .result-box.active {
-    scrollbar-width: thin !important;
-    scrollbar-color: #5b66ff #f1f1f1 !important;
-}
 
 /* Media queries */
 @media (max-width: 992px) {
