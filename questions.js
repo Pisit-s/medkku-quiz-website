@@ -146,8 +146,7 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี",
-        image: "minor6.jpg"
+        answer: "มี"
     },
 
     {
@@ -158,8 +157,7 @@ let questions = [
             "มี",
             "ไม่มี"
         ],
-        answer: "มี",
-        image: "minor7.jpg"
+        answer: "มี"
     },
 
     {
