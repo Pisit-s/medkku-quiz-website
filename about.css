@@ -276,7 +276,7 @@ body {
 .social-icons .fa-envelope:hover { color: #ff6b98; }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+@media (max-width: 1215px) {
     .member-image-container {
         width: 200px;
         height: 200px;
