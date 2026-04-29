@@ -1126,3 +1126,35 @@ body {
     }
 }
 
+
+/* ── Language Toggle Button ─────────────────────────────────────────────── */
+.lang-toggle-btn {
+    margin-top: 15px;
+    width: 220px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #804e2a;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #804e2a;
+    cursor: pointer;
+    transition: .3s;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 1px;
+}
+
+.lang-toggle-btn:hover {
+    background: #804e2a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .lang-toggle-btn {
+        width: 60px;
+        height: 32px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+}

@@ -1,3 +1,4 @@
+// ── questions TH (original) ───────────────────────────────────────────────────
 let questions = [
     {
         numb: 0,
@@ -43,24 +44,14 @@ let questions = [
         question: "ตำแหน่งของผื่น (ตอบได้มากกว่า 1)",
         options: [
             "ใบหน้า/แก้ม",
-            "หนังศรีษะ",
+            "หนังศีรษะ",
             "ไรผม",
-            "ด้านนอกของแขน และ ขา",
             "ลำตัว",
-            "ข้อพับแขน",
-            "ข้อพับขา",
+            "ด้านนอกของแขน หรือ ขา",
+            "ข้อพับแขน หรือ ขา",
             "ซอกพับคอ รักแร้"
         ],
-        answer: [
-            // "ใบหน้า/แก้ม",
-            // "หนังศรีษะ",
-            // "ไรผม",
-            // "ด้านนอกของแขน และ ขา",
-            // "E. ลำตัว",
-            // "F. ข้อพับแขน",
-            // "G. ข้อพับขา"
-            "S."
-        ]
+        answer: ["S."]
     },
 
     {
@@ -82,70 +73,47 @@ let questions = [
         numb: 5.1,
         type: "Minor",
         question: "มีอาการผิวแห้ง",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor1.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
 
     {
         numb: 5.2,
         type: "Minor",
         question: "มีอาการผิวหนังรอบดวงตา แห้ง คล้ำ",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor2.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
 
     {
         numb: 5.3,
         type: "Minor",
         question: "มีอาการผื่นวงขาวตามร่างกาย / เกลื้อนน้ำนม",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor3.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
 
     {
         numb: 5.4,
         type: "Minor",
         question: "เส้นลายมือหนา",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor4.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
 
     {
         numb: 5.5,
         type: "Minor",
         question: "มีอาการผื่นแห้งรอบปาก",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor5.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
 
     {
         numb: 5.6,
         type: "Minor",
         question: "มีอาการคันตา ตาอักเสบเรื้อรัง",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
+        options: ["มี", "ไม่มี"],
         answer: "มี"
     },
 
@@ -153,10 +121,7 @@ let questions = [
         numb: 5.7,
         type: "Minor",
         question: "มีอาการตุ่มนูนรอบรูขุมขน",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
+        options: ["มี", "ไม่มี"],
         answer: "มี"
     },
 
@@ -164,22 +129,15 @@ let questions = [
         numb: 5.8,
         type: "Minor",
         question: "มีอาการผื่นแห้งคันรอบหัวนม",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor8.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
 
     {
         numb: 5.9,
         type: "Minor",
         question: "มีอาการคันเมื่อมีเหงื่อ",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
+        options: ["มี", "ไม่มี"],
         answer: "มี"
     },
 
@@ -187,11 +145,7 @@ let questions = [
         numb: 5.11,
         type: "Minor",
         question: "มีประวัติแพ้อาหารหรือนม",
-        options: [
-            "มี",
-            "ไม่มี",
-            "ไม่แน่ใจ"
-        ],
+        options: ["มี", "ไม่มี", "ไม่แน่ใจ"],
         answer: "มี"
     },
 
@@ -199,10 +153,7 @@ let questions = [
         numb: 5.12,
         type: "Minor",
         question: "มีอาการระคายเคืองเมื่อใส่เสื้อผ้าเนื้อหยาบ",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
+        options: ["มี", "ไม่มี"],
         answer: "มี"
     },
 
@@ -210,10 +161,7 @@ let questions = [
         numb: 5.13,
         type: "Minor",
         question: "มีอาการผื่นเปลี่ยนแปลงตามฤดูกาล",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
+        options: ["มี", "ไม่มี"],
         answer: "มี"
     },
 
@@ -221,10 +169,7 @@ let questions = [
         numb: 5.14,
         type: "Minor",
         question: "มีรอยขาวหลังถูกขีดที่ผิวหนัง",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
+        options: ["มี", "ไม่มี"],
         answer: "มี"
     },
 
@@ -232,22 +177,15 @@ let questions = [
         numb: 5.15,
         type: "Minor",
         question: "มีรอยพับเป็นเส้น บริเวณคอ",
-        options: [
-            "มี",
-            "ไม่มี"
-        ],
-        answer: "มี",
-        image: "minor15.jpg"
+        options: ["มี", "ไม่มี"],
+        answer: "มี"
     },
     
     {
         numb: 5.16,
         type: "Minor",
         question: "ผื่นเริ่มเกิดขึ้นตั้งแต่อายุน้อยกว่า 2 ปี",
-        options: [
-            "ใช่",
-            "ไม่ใช่"
-        ],
+        options: ["ใช่", "ไม่ใช่"],
         answer: "ใช่"
     }
 ];
@@ -286,3 +224,13 @@ const questionTypes = {
     5.15: "Minor",
     5.16: "Minor"
 };
+
+// ── helpers ───────────────────────────────────────────────────────────────────
+// Returns the active question list based on current language
+function getQuestions() {
+    return currentLang === 'en' ? questionsEN : questions;
+}
+
+function getQuestion21() {
+    return currentLang === 'en' ? Question21EN : Question21;
+}

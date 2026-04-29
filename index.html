@@ -27,7 +27,7 @@
                 <section class="quiz-section">
                     <div class="quiz-box">
                         <h1>แบบทดสอบเพื่อการวินิจฉัยเบื้องต้น</h1>  
-                        <h2 class="question-text">คุณมีอาการคันผิวหนังบ่อยหรือไม่?</h2>
+                        <h2 class="question-text"></h2>
                         <div class="option-list"></div>
                         <div class="quiz-footer">
                             <button class="back-btn">ย้อนกลับ</button>
@@ -37,20 +37,13 @@
 
                         <footer class="about-footer">
                             <p>© Copyright <a href="about.html" target="_blank" class="highlight-primary">KKU ADBot</a> All Rights Reserved</p>
-                            <p>Developed by <a href="https://kuchi.dev" target="_blank" class="highlight-secondary">kuchi.dev</a></p>
+                            <p>Developed by <a href="https://mypisit.com" target="_blank" class="highlight-secondary">mypisit.com</a></p>
                         </footer>
                 
                     </div>
 
                     <div class="result-box">
                         <h2 class="result-header">ผลการวินิจฉัยเบื้องต้น</h2>
-                        <!-- <div class="percentage-container">
-                            <div class="circular-progress">
-                                <span class="progress-value">0%</span>
-                            </div>
-                            <span class="score-text">คะแนนของคุณ 0 จาก 5</span>
-                        </div> -->
-
                         <div class="buttons">
                             <button class="tryAgain-btn">ลองอีกครั้ง</button>
                             <button class="goHome-btn">กลับหน้าแรก</button>
@@ -69,6 +62,7 @@
                             โรคผื่นภูมิแพ้ผิวหนัง</h1>
                         <button class="start-btn">เริ่มทำแบบทดสอบ</button>
                         <a href="about.html" class="back-button aboutme">เกี่ยวกับเรา</a>
+                        <button id="lang-toggle" class="lang-toggle-btn">EN</button>
                     </div>
                 </section>
 
@@ -78,7 +72,7 @@
 
         <div class="popup-info">
             <h2>มาเริ่มทำแบบคัดกรองกัน !!</h2>
-            <div class="info"> แบบคัดกรองนี้เป็นการประเมินเบื้องต้น ในการวินิจฉัยโรคผื่นภูมิแพ้ผิวหนัง  
+            <div class="info">แบบคัดกรองนี้เป็นการประเมินเบื้องต้น ในการวินิจฉัยโรคผื่นภูมิแพ้ผิวหนัง  
                 ลักษณะแบบคัดกรอง เป็นข้อมูลถามตอบ เกี่ยวกับอาการของผื่นที่ท่านเป็น 
                 ใช้เวลาในการทำแบบคัดกรอง ประมาณ 1-2 นาที</div>
             <div class="btn-group">
@@ -87,6 +81,7 @@
             </div>
         </div>
 
+        <script src="lang.js"></script>
         <script src="questions.js"></script>
         <script src="script.js"></script>
     </body>
