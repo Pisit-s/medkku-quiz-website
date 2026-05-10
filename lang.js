@@ -75,7 +75,7 @@ const LANG = {
                 faculty: "คณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น"
             },
             {
-                img: "about/1.png", alt: "pisit",
+                img: "about/1.jpeg", alt: "pisit",
                 email: "pisit.sr@kkumail.com",
                 name: "นายพิสิษฐ์ ศรีชำนาจ",
                 role: "นักศึกษาสาขาวิชาวิศวกรรมคอมพิวเตอร์",
@@ -165,7 +165,7 @@ const LANG = {
                 faculty: "Faculty of Engineering, Khon Kaen University"
             },
             {
-                img: "about/1.png", alt: "pisit",
+                img: "about/1.jpeg", alt: "pisit",
                 email: "pisit.sr@kkumail.com",
                 name: "Mr. Pisit Srichumnart",
                 role: "Computer Engineering student",
